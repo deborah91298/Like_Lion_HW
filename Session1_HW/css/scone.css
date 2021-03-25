@@ -1,5 +1,6 @@
 .blog {
     text-align: center;
+    border: dashed rgba(49, 187, 111, 0.582) 10px;
 }
 
 p {color: black;}
