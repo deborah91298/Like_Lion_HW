@@ -1,0 +1,29 @@
+.blog-header {
+    /* color: aqua; */
+    /* border: dotted beige 10px; */
+    border: dashed rgba(49, 187, 111, 0.582) 10px;
+    text-align: center;
+}
+
+.bread {
+    color: blueviolet;
+}
+
+.human {
+    color: red;
+    font-style: normal;
+    border-style: solid;
+}
+
+.inline {
+    display: inline;
+}
+
+.button {
+    font-size: larger;
+}
+
+
+.firstImage {
+    width: 100%;
+}

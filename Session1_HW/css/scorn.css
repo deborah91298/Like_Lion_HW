@@ -1,0 +1,20 @@
+.blog-header {
+    border: dotted beige 10px;
+    border: dashed rgba(49, 187, 111, 0.582) 10px;
+    text-align: center;
+}
+
+
+h4 {
+    color: saddlebrown;
+}
+
+
+.warning {
+    color: red;
+}
+
+
+.firstImage {
+    width: 100%;
+}

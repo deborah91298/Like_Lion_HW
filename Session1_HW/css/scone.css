@@ -1,0 +1,67 @@
+.blog {
+    text-align: center;
+}
+
+p {color: black;}
+span {color: blanchedalmond;}
+
+.blog-body {
+    color: rgb(51, 51, 51);
+}
+
+header {
+  background-color: #DBE9EE;
+  padding: 40px;
+  font-size: larger;
+}
+
+.title {
+    color: teal;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+#article-title {
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+.share {
+    border: 1px solid LightGrey;
+    padding: 40px 0px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .share a {
+    padding: 14px;
+    background: beige;
+    border: 1px solid beige;
+    border-radius: 3px;
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .bread {
+    display: flex;
+  }
+
+  .answer {
+    width: 30%;
+    margin: 10px;
+  }
+
+  .image {
+    height: 300px;
+  }
+  
+  /* .share a:hover {
+    background: white;
+    border: 1px solid red;
+    color: red;
+  } */
