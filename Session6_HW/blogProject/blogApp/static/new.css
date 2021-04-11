@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    border: 10px cornflowerblue dashed;
+}
