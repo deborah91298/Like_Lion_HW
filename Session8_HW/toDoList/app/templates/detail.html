@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock %}
+
+{% block pages %}
+<div class="three-contents">
+    <div class="title">
+        <h2>제목</h2>
+        <p>{{ list.title }}</p>
+    </div>
+    <div class="content">
+        <h2>세부사항</h2>
+        <p>{{ list.content }}</p>
+    </div>
+    <div class="deadline">
+        <h2>마감기한</h2>
+        <p>{{ list.deadline }}</p>
+    </div>
+</div>
+<div class="three-links">
+    <a href="{% url 'edit' list.pk %}">수정하기</a>
+    <a href="{% url 'delete' list.pk %}">삭제하기</a>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block pages %}
+<div class="welcome">
+    <p>Welcome!</p>
+    <p>할 일이 많이 밀려 있어요!</p>
+    <p>어서 시작해봅시다!</p>
+</div>
+{% endblock %}
