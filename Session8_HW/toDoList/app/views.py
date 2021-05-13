@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import List
+from .models import Comment, List
 
 # Create your views here.
 def home(request):
@@ -26,6 +26,14 @@ def new(request):
 def detail(request, list_pk):
     list = List.objects.get(pk=list_pk)
 
+    if request.method=='POST':
+        content = request.POST['content']
+        Comment.objects.create(
+            list = list,
+            content=content
+        )
+        return redirect('detail', list_pk)
+
     return render(request, 'detail.html', {'list': list})
 
 def edit(request, list_pk):
@@ -46,3 +54,8 @@ def delete(request, list_pk):
     list.delete()
 
     return redirect('home')
+
+def delete_comment(request, list_pk, comment_pk):
+    comment = Comment.objects.get(pk=comment_pk)
+    comment.delete()
+    return redirect('detail', list_pk)
