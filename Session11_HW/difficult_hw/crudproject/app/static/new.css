@@ -1,0 +1,63 @@
+.main_title{
+    width : 400px;
+    background-size: 100px;
+    background-repeat:repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color:rgb(247, 247, 247);
+    font-size: 20px;
+    margin-top: 50px;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.deadline {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.three-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding-bottom: 10px;
+    font-family: 'Hi Melody', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

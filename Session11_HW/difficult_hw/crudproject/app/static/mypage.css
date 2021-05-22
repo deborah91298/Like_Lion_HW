@@ -1,0 +1,29 @@
+.main_title{
+    width : 400px;
+    background-size: 100px;
+    background-repeat:repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color:rgb(247, 247, 247);
+    font-size: 20px;
+    margin-top: 50px;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+}
+    
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mypage {
+    width: 400px;
+}
+
+.mypage > h1 {
+    font-size: 17px;
+}

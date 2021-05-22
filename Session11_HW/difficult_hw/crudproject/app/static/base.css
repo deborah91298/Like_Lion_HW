@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(235, 182, 132);
+}
+
+h1 {
+  border-top: 2px rgb(148, 147, 147) solid;
+  border-bottom: 2px rgb(148, 147, 147) solid;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100px;
+  color: white;
+  margin: 10px 0px 10px;
+}
+
+.wrapper {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.menus {
+  display: flex;
+  flex-direction: row;
+}

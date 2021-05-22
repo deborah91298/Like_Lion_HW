@@ -1,0 +1,62 @@
+{% load static %} {% load socialaccount %} {% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    {% block css %}
+
+    {% endblock %}
+    <title>To-do List</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>To-do List</h1>
+    <div class="menus">
+      <a href="{% url 'home' %}">홈으로</a>
+      {% if user.is_authenticated %}
+      |&nbsp;<a href="{% url 'new' %}">일정추가</a>
+      {% endif %}
+
+      {% if user.is_authenticated %}
+      |&nbsp;<p>환영합니다 <a href="{% url 'mypage' user.pk %}">{{ user.username }}님</a></p>|
+      <a href="{% url 'logout' %}">로그아웃</a>
+
+      {% else %}
+      |&nbsp;<a href="{% provider_login_url 'kakao' %}">카카오 로그인</a>&nbsp;|
+      <a href="{% url 'login' %}">로그인</a>&nbsp;|
+      <a href="{% url 'signup' %}">회원가입</a>
+      {% endif %}
+    </div>
+  </div>
+
+    </div>
+    <div class="center">
+        <div class="main_title">
+          {% block title %}
+          {% endblock %}
+        </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+
+<script type="text/javascript">
+  const idInput = document.querySelector('#username');
+
+  const checkInputValid = () => {
+      if (idInput.value.length > 10) {
+          alert('아이디는 10자리 이하로 해주세요!');
+      }
+  };
+
+  checkInputValid();
+
+</script>
+
+</html>

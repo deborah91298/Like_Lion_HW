@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'mypage.css' %}">
+{% endblock %}
+
+{% block title %}
+{{ user.username }}님의 활동
+{% endblock %}
+{% block content %}
+<div class="center">
+    <div class="mypage">
+        <h1>내 할일</h1>
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a href="{% url 'detail' post.pk %}">{{ post.title }} [남은 시간:{{ post.date|timeuntil }}]</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <h1>내 댓글</h1>
+        <ul>
+            {% for comment in comments %}
+            <li>
+                <a href="{% url 'detail' comment.post.pk %}">{{ comment.content }}</a>
+                {% endfor %}
+            </li>
+            {% endblock content %}
+        </ul>
+    </div>
+</div>
