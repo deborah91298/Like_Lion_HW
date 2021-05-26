@@ -1,0 +1,41 @@
+.title {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.deadline {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.three-contents {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+label {
+    padding-bottom: 10px;
+    font-family: 'Hi Melody', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: purple;
+}
+
+input, textarea {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+button {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+}

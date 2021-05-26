@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'new.css' %}">
+{% endblock %}
+
+{% block title %}
+일정추가
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="center">
+        <div class="center_wrapper">
+            <div class="name">
+                <label for="title">Name: </label>
+                <input type="text" id="title" name="title" placeholder="일정을 입력해주세요. " />
+            </div>
+            <div class="content">
+                <label for="content">Content: </label><br>
+                <div class="content_date">
+                    <div class="wrap">
+                        <textarea id="txt" onkeyup="counter()" placeholder="내용을 입력해주세요."></textarea>
+                        <div class="counter">
+                            <span id="counting">0</span>자 (공백 포함)
+                        </div>
+                    </div>
+                    <input type="datetime-local" name="date" id="date" />
+                </div>
+            </div>
+            <div class="save_button">
+                <button type="submit">Save</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<script type="text/javascript"> // new.html 실시간 글자수 카운팅
+
+    function counter(){
+            document.getElementById("counting").innerHTML = document.getElementById("txt").value.length;         
+        }
+
+    // checkCountValid();
+
+    // $(function() {
+    //     $(`#content`).keyup(function(e) {
+    //         var content = $(this).val();
+    // $(this).height(((content.split('\n').length + 1) * 1.5) + 'em');
+    //         $(`#counter`).html(content.length + '/300');
+    //     });
+    //     $(`#content`).keyup();
+    // });
+
+    // $(`.input_text`).keyup(function (e) {
+    //     var content = $(this).val();
+    //     $(`#counter`).html("("+content.length+" / 최대 200자"); // 글자수 실시간 카운팅
+
+    //     if (content.length > 20) {
+    //         alert("최대 200까지 입력 가능합니다.");
+    //         $(this).val(content.substring(0,200));
+    //         $(`#counter`).html("(200 / 최대 200자)");
+    //     }
+    // });
+</script>
+{% endblock %}

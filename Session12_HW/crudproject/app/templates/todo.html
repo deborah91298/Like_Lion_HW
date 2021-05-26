@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'todo.css' %}">
+{% endblock %}
+
+{% block pages %}
+<div>
+    <ul>
+        {% for list in lists %}
+        <li>
+            <div class="content">
+                <a href="{% url 'detail' list.pk %}">{{ list.title }}</a>
+                <span>마감기한: {{ list.deadline }}</span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
