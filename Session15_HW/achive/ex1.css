@@ -1,0 +1,257 @@
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  font-weight: bold
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.darkBtn {
+  position: absolute;
+  top: 38px;
+  left: 48px;
+  width: 90px;
+  background-color: white;
+  border: dashed 2px black;
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.darkBtn:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+/* Popup container */
+.popup {
+  position: absolute;
+  left: 146px;
+  top: 47px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* The actual popup (appears on top) */
+.popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: #f44336;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 63px;
+  bottom: -4px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -13px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.tooltip {
+  border-bottom: 1px dotted white;
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Tooltip text */
+.tooltipText {
+  /* visibility: hidden; */
+  width: 100px;
+  background-color: white;
+  color: #f44336;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Font */
+  font-size: 12px;
+
+  /* Position the tooltip text */
+  position: absolute;;
+  margin-left: 20px;
+  top: 10%;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltipText::after {
+  content: "";
+  position: absolute;
+  margin-left: -102px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  border: none;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.inputBox {
+  display: flex;
+}
+
+.dark-mode-header {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode-tooltipText {
+  color: black;
+}
+
+.dark-mode-darkBtn {
+  border: dashed 2px #f44336;
+}
+
+.dark-mode-popuptext {
+  color: black;
+}
