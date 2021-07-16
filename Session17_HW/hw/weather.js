@@ -1,8 +1,10 @@
+// import * as data from "/config/index.json" assert {type: "json"};
+
 const input = document.querySelector("#city");
 const button = document.querySelector("#submit");
 const weatherBox = document.querySelector("#weatherBox");
 
-const API_KEY = "042253f2e9bc748baf5005de6ec930a0";
+const API_KEY = '042253f2e9bc748baf5005de6ec930a0';
 
 button.addEventListener("click", async () => {
   //input의 값을 가져와서 도시이름으로 url에 넣는다.
@@ -248,57 +250,65 @@ button.addEventListener("click", async () => {
             <p>오늘</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_0}.png">
             <p>${day_humidity_0}%</p>
-            <p>최고: ${day_max_0}°C</p>
-            <p>최저: ${day_min_0}°C</p>
+            <p>${day_max_0}°C</p>
+            <p>|</p>
+            <p>${day_min_0}°C</p>
           </div>
           <div class="day">
             <p>${day_1}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_1}.png">
             <p>${day_humidity_1}%</p>
-            <p>최고: ${day_max_1}°C</p>
-            <p>최저: ${day_min_1}°C</p>
+            <p>${day_max_1}°C</p>
+            <p>|</p>
+            <p>${day_min_1}°C</p>
           </div>
           <div class="day">
             <p>${day_2}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_2}.png">
             <p>${day_humidity_2}%</p>
-            <p>최고: ${day_max_2}°C</p>
-            <p>최저: ${day_min_2}°C</p>
+            <p>${day_max_2}°C</p>
+            <p>|</p>
+            <p>${day_min_2}°C</p>
           </div>
           <div class="day">
             <p>${day_3}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_3}.png">
             <p>${day_humidity_3}%</p>
-            <p>최고: ${day_max_3}°C</p>
-            <p>최저: ${day_min_3}°C</p>
+            <p>${day_max_3}°C</p>
+            <p>|</p>
+            <p>${day_min_3}°C</p>
           </div>
           <div class="day">
             <p>${day_4}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_4}.png">
             <p>${day_humidity_4}%</p>
-            <p>최고: ${day_max_4}°C</p>
-            <p>최저: ${day_min_4}°C</p>
+            <p>${day_max_4}°C</p>
+            <p>|</p>
+            <p>${day_min_4}°C</p>
           </div>
           <div class="day">
             <p>${day_5}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_5}.png">
             <p>${day_humidity_5}%</p>
-            <p>최고: ${day_max_5}°C</p>
-            <p>최저: ${day_min_5}°C</p>
+            <p>${day_max_5}°C</p>
+            <p>|</p>
+            <p>${day_min_5}°C</p>
           </div>
           <div class="day">
             <p>${day_6}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_6}.png">
             <p>${day_humidity_6}%</p>
-            <p>최고: ${day_max_6}°C</p>
-            <p>최저: ${day_min_6}°C</p>
+            <p>${day_max_6}°C</p>
+            <p>|</p>
+            <p>${day_min_6}°C</p>
           </div>
           <div class="day">
             <p>${day_7}</p>
             <img class="icon" src="http://openweathermap.org/img/w/${day_icon_7}.png">
             <p>${day_humidity_7}%</p>
-            <p>최고: ${day_max_7}°C</p>
-            <p>최저: ${day_min_7}°C</p>
+            <p>${day_max_7}°C</p>
+            <p>|</p>
+            <p>${day_min_7}°C</p>
           </div>
         </div>
       </div>
